@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"C_Cpp.default.compilerPath": "C:/intelFPGA/18.1/embedded/ds-5/sw/gcc/bin/arm-linux-gnueabihf-gcc.exe",
+		"C_Cpp.default.includePath": [
+			"C:/intelFPGA/18.1/embedded/ip/altera/hps/altera_hps/hwlib/include/soc_cv_av",
+			"C:/intelFPGA/18.1/embedded/ip/altera/hps/altera_hps/hwlib/include"
+		],
+		"git.ignoreLimitWarning": true,
+		"files.exclude": {
+			"DECRYPTER": true,
+			"ENCRYPTER": true,
+			"SOFT_DECRYPTER": true,
+			"SOFT_ENCRYPTER": true,
+			"TV": true
+		}
+	}
+	
+}

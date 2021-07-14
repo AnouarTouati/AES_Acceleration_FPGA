@@ -1,0 +1,41 @@
+#
+
+#
+ALT_DEVICE_FAMILY ?= soc_cv_av
+SOCEDS_ROOT ?= $(SOCEDS_DEST_ROOT)
+HWLIBS_ROOT = $(SOCEDS_ROOT)/ip/altera/hps/altera_hps/hwlib
+CROSS_COMPILE = arm-linux-gnueabihf-
+CFLAGS = -g -Wall  -D$(ALT_DEVICE_FAMILY) -I$(HWLIBS_ROOT)/include/$(ALT_DEVICE_FAMILY)   -I$(HWLIBS_ROOT)/include/
+LDFLAGS =  -g -Wall 
+
+CC = $(CROSS_COMPILE)gcc
+ARCH= arm
+
+
+.PHONY: all
+
+all : PROGRAM DECRYPTER ENCRYPTER SOFT_ENCRYPTER SOFT_DECRYPTER ENCRYPTER-REALTIME SOFT_ENCRYPTER-REALTIME
+
+PROGRAM: main.o 
+	$(CC) $(LDFLAGS)   $^ -o $@  
+
+DECRYPTER: DECRYPTER.o 
+	$(CC) $(LDFLAGS)   $^ -o $@  
+
+ENCRYPTER: ENCRYPTER.o 
+	$(CC) $(LDFLAGS)   $^ -o $@  
+
+SOFT_ENCRYPTER: SOFT_ENCRYPTER.o 
+	$(CC) $(LDFLAGS)   $^ -o $@
+
+SOFT_DECRYPTER: SOFT_DECRYPTER.o 
+	$(CC) $(LDFLAGS)   $^ -o $@ 	
+
+SOFT_ENCRYPTER-REALTIME: SOFT_ENCRYPTER-REALTIME.o 
+	$(CC) $(LDFLAGS)   $^ -o $@ 
+
+ENCRYPTER-REALTIME: ENCRYPTER-REALTIME.o 
+	$(CC) $(LDFLAGS)   $^ -o $@ 
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@

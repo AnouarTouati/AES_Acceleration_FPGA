@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"C_Cpp.default.compilerPath": "C:/intelFPGA/18.1/embedded/ds-5/sw/gcc/bin/arm-linux-gnueabihf-gcc.exe",
+		"C_Cpp.default.includePath": [
+			"C:/intelFPGA/18.1/embedded/ip/altera/hps/altera_hps/hwlib/include/soc_cv_av",
+			"C:/intelFPGA/18.1/embedded/ip/altera/hps/altera_hps/hwlib/include"
+		],
+		"files.associations": {
+			"alt_gpio.h": "c"
+		}
+	}
+}
