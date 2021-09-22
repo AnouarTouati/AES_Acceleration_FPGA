@@ -2,4 +2,4 @@
 *.sv linguist-detectable=false
 *.HTML linguist-detectable=false
 *.html linguist-detectable=false
-*.VHDL linguist-detectable=false
+*.vhd linguist-detectable=false
