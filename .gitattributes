@@ -1,2 +1,2 @@
-*.v linguist-detectable =false
-*.sv linguist-detectable = false
+*.v linguist-detectable=false
+*.sv linguist-detectable=false
